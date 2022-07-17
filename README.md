@@ -13,7 +13,7 @@ The reason is that I mainly use those tools at work. In the future, there may be
 
 ## What does this project actually do
 This project will give you information about your contribution to your employer. What I mean by that is this project can produce a report that gives you information such as:
-- What is Github PRs that you've created?
+- What are Github PRs that you've created?
 - What are Github issues that you've raised?
 - What are JIRA issues that were assigned to you and you successfully solved them?
 The list can be grown. Suggestion for improvement to this project is welcome :) 
