@@ -16,6 +16,7 @@ This project will give you information about your contribution to your employer.
 - What are Github PRs that you've created?
 - What are Github issues that you've raised?
 - What are JIRA issues that were assigned to you and you successfully solved them?
+
 The list can be grown. Suggestion for improvement to this project is welcome :) 
 
 ## How to run this project
