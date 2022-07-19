@@ -3,7 +3,7 @@ to give you information about your work contributions to your organization.
 
 ## Why create this?
 
-The reason why I'm creating this simple project is to review and reflect on what I've done during my work for my employer. . Hopefully after the reflection I can be better at work and give my best for my employer.
+The reason why I'm creating this simple project is to review and reflect on what I've done during my work for my employer. Hopefully after the reflection I can be better at work and give my best for my employer.
 
 ## Integration
 This project is integrated with multiple 3rd party such as:
