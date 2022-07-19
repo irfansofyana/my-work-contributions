@@ -32,8 +32,6 @@ func SearchIssues(client *github.Client, param SearchIssuesParam) ([]github.Issu
 		query = fmt.Sprintf("%s created:>=%s", query, param.CreatedStartFrom)
 	}
 
-	fmt.Println(query)
-
 	issues := make([]github.Issue, 0)
 
 	opt := &github.SearchOptions{
