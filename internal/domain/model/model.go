@@ -20,8 +20,8 @@ const (
 func (t TypeOfWork) String() string {
 	return [...]string{
 		"Github Pull Request",
-		"Github Issues",
-		"Jira Ticket",
+		"Github Issue",
+		"JIRA Ticket",
 	}[t]
 }
 
