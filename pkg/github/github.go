@@ -26,7 +26,7 @@ func CreateClient(accessToken string) *github.Client {
 }
 
 // SearchIssues is function to find issues with the requested param
-func SearchIssues(client *github.Client, param SearchIssuesParam) ([]github.Issue, error) {
+func SearchIssues(client *github.Client, param *SearchIssuesParam) ([]github.Issue, error) {
 	query := fmt.Sprintf("author:%s org:xendit", param.GithubUsername)
 	if param.CreatedStartFrom != "" {
 		query = fmt.Sprintf("%s created:>=%s", query, param.CreatedStartFrom)

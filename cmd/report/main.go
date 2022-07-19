@@ -1,27 +1,20 @@
 package main
 
 import (
-	"fmt"
-	"log"
-
+	"github.com/irfansofyana/workcontributions/internal/domain/infrastructure"
+	"github.com/irfansofyana/workcontributions/internal/domain/repository"
+	"github.com/irfansofyana/workcontributions/internal/report"
 	"github.com/irfansofyana/workcontributions/pkg/github"
 	"github.com/siuyin/dflt"
 )
 
 func main() {
 	accessToken := dflt.EnvString("GITHUB_TOKEN", "")
-	client := github.CreateClient(accessToken)
-	issues, err := github.SearchIssues(client, github.SearchIssuesParam{
-		GithubUsername:   "irfansofyana",
-		GithubOrg:        "xendit",
-		CreatedStartFrom: "2022-04-01",
-	})
-	if err != nil {
-		log.Fatal(err)
-	}
+	githubUsername := dflt.EnvString("GITHUB_USERNAME", "irfansofyana")
+	githubOrg := dflt.EnvString("GITHUB_ORG", "xendit")
 
-	fmt.Printf("Number of issues found: %d\n", len(issues))
-	for _, issue := range issues {
-		fmt.Println(*issue.ID, *issue.Title, *issue.URL)
-	}
+	client := github.CreateClient(accessToken)
+	githubRepo := infrastructure.NewGithubRepository(client, githubUsername, githubOrg)
+
+	report.Print(githubRepo, &repository.WorkRepositoryParam{WorkAfterDate: "2022-04-01"})
 }
